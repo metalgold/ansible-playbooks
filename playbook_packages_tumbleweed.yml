@@ -1,0 +1,21 @@
+---
+- name: Workstation
+  hosts: 
+    - localhost
+  roles:
+  tasks:
+  - name: Install all packages
+    ansible.builtin.package:
+      name:
+        - steam
+        - wget
+        - direnv
+        - fzf
+        - keepassxc
+        - rcm
+        - vim
+        - thunderbird
+        - gnome-tweak-tool
+      state: latest
+    become: true
+    tags: packages

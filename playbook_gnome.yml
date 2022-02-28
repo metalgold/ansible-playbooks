@@ -1,0 +1,63 @@
+---
+- name: Workstation
+  hosts: 
+    - localhost
+  tasks:
+  - name: Tap To Click
+    dconf:
+      key: /org/gnome/desktop/peripherals/touchpad/tap-to-click
+      value: "true"
+      state: present
+    tags: "dconf"
+  - name: Window Layout
+    dconf:
+      key: "/org/gnome/desktop/wm/preferences/button-layout"
+      value: >
+        ":minimize,maximize,close"
+      state: present
+    tags: "dconf"
+  - name: Middle paste
+    dconf:
+      key: /org/gnome/desktop/interface/gtk-enable-primary-paste
+      value: "false"
+      state: present
+    tags: "dconf"
+  - name: Hinting
+    dconf:
+      key: /org/gnome/desktop/interface/font-hinting
+      value: "'full'"
+      state: present
+    tags: "dconf"
+  - name: Antialias
+    dconf:
+      key: /org/gnome/desktop/interface/font-antialiasing
+      value: "'rgba'"
+      state: present
+    tags: "dconf"
+  - name: Disable Hot Corners
+    dconf:
+      key: /org/gnome/desktop/interface/enable-hot-corners
+      value: "false"
+      state: present
+    tags: "dconf"
+  - name: Show Battery percentage
+    dconf:
+      key: /org/gnome/desktop/interface/show-battery-percentage
+      value: "true"
+      state: present
+    tags: "dconf"
+  - name: Clock-Show-Weekday
+    dconf:
+      key: /org/gnome/desktop/interface/clock-show-weekday
+      value: "true"
+      state: present
+  - name: Show-Weekdate
+    dconf:
+      key: /org/gnome/desktop/calendar/show-weekdate
+      value: "true"
+      state: present
+  - name: Clock-Show-Seconds
+    dconf:
+      key: /org/gnome/desktop/interface/clock-show-seconds
+      value: "true"
+      state: present

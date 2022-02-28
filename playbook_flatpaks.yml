@@ -1,0 +1,28 @@
+---
+- name: Workstation
+  hosts: 
+    - localhost
+  tasks:
+  - name: Install all packages
+    ansible.builtin.package:
+      name:
+        - flatpak
+      state: latest
+    become: true
+    tags: packages
+  - name: Add the flathub flatpak repository remote to the user installation
+    community.general.flatpak_remote:
+      name: flathub
+      state: present
+      flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      method: user
+  - name: Flatpak Spotify
+    community.general.flatpak:
+      name:
+        - us.zoom.Zoom
+        - com.mattermost.Desktop
+        - com.slack.Slack
+        - com.visualstudio.code
+      remote: flathub
+      method: user
+

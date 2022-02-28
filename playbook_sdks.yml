@@ -1,0 +1,38 @@
+---
+- name: Workstation
+  hosts: 
+    - localhost
+  roles:
+  - role: gantsign.sdkman
+    sdkman_users:
+        - "{{ ansible_user_id }}"
+  - role: gantsign.sdkman_init
+    users:
+      - username: "{{ ansible_user_id }}"
+        sdkman_install:
+          - candidate: java
+            version: '11.0.11.hs-adpt'
+        sdkman_default:
+          java: '11.0.11.hs-adpt'
+  - role: morgangraphics.ansible_role_nvm
+    default: true
+    nodejs_version: "16"
+    nvm_profile: "/home/{{ ansible_user_id }}/.zshrc"
+  - role: robertdebock.npm
+    become: true
+  tasks:
+  - name: Install all packages
+    ansible.builtin.package:
+      name:
+        - maven
+        - zeal
+  - name: npm yarn
+    npm:
+      name: yarn
+      global: yes
+    become: true
+  - name: npm vue clie-service
+    npm:
+      name: '@vue/cli-service'
+      global: yes
+    become: true

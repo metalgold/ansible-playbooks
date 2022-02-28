@@ -1,0 +1,37 @@
+---
+- name: Workstation
+  hosts: 
+    - localhost
+  roles:
+  - role: gantsign.antigen
+    users:
+      - username: "{{ ansible_user_id }}"
+        antigen_libraries:
+          - name: oh-my-zsh
+        antigen_theme:
+          name: romkatv/powerlevel10k
+        antigen_bundles:
+          - name: zsh-syntax-highlighting
+            url: zsh-users/zsh-syntax-highlighting
+          - name: zsh-autosuggestions
+            url: zsh-users/zsh-autosuggestions
+          - name: powerlevel10k
+            url: romkatv/powerlevel10k
+  - role: diodonfrost.p10k
+    tags: "p10k"
+
+  tasks:
+  - name: Install all packages
+    ansible.builtin.package:
+      name:
+        - zsh
+      state: latest
+    become: true
+    tags: packages
+  - name: change to zsh
+    ansible.builtin.user:
+      name: "{{ ansible_user_id }}"
+      shell: /bin/zsh
+      groups: "docker"
+      append: true
+    become: true

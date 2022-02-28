@@ -1,0 +1,30 @@
+---
+- name: Workstation
+  hosts: 
+    - localhost
+  roles:
+  tasks:
+  - name: Install all packages
+    ansible.builtin.package:
+      name:
+        - python3-pip
+        - docker
+        - python310-docker-compose
+        - terraform
+        - k9s
+        - helm
+        - kubernetes-client
+        - kubectx
+      state: latest
+    become: true
+    tags: packages
+  - name: Install bottle, forcing reinstallation if it's already installed
+    pip:
+      name:
+        - docker-compose
+  - name: docker daemon
+    service:
+      name: docker
+      state: started
+      enabled: yes
+    become: true

@@ -1,0 +1,23 @@
+---
+- name: Workstation
+  hosts: 
+    - localhost
+  vars_prompt:
+    - name: git_email
+      prompt: Please enter email address for git
+      private: no
+    - name: git_full_name
+      prompt: Please enter full name for git
+      private: no
+  tasks:
+  - name: git email
+    community.general.git_config:
+      name: user.email
+      value: "{{ git_email }}"
+      scope: global
+  - name: git name
+    community.general.git_config:
+      name: user.name
+      value: "{{ git_full_name }}"
+      scope: global
+ 

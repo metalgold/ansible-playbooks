@@ -1,0 +1,31 @@
+---
+- name: Workstation
+  hosts: 
+    - localhost
+  roles:
+  - role: gantsign.inotify
+    inotify_max_user_watches: 524288
+    become: true
+  - role: robertdebock.ulimit
+    ulimit_items:
+      - limit_item: nofile
+        domain: root
+        limit_type: soft
+        value: 1048576
+      - limit_item: nproc
+        domain: root
+        limit_type: soft
+        value: 1024
+      - limit_item: nproc
+        domain: root
+        limit_type: hard
+        value: 2048
+    become: true
+  tasks:
+  - name: file limits
+    community.general.pam_limits:
+      domain: "{{ ansible_user_id }}"
+      limit_type: soft
+      limit_item: nofile
+      value: '64000'
+    become: true
