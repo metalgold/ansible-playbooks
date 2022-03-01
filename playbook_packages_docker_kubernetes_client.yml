@@ -15,6 +15,7 @@
         - helm
         - kubernetes-client
         - kubectx
+        - kubens
       state: latest
     become: true
     tags: packages
