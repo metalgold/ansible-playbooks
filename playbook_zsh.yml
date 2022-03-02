@@ -10,7 +10,7 @@
         antigen_libraries:
           - name: oh-my-zsh
         antigen_theme:
-          name: spaceship-prompt/spaceship-prompt
+            name: robbyrussell
         antigen_bundles:
           - name: zsh-syntax-highlighting
             url: zsh-users/zsh-syntax-highlighting
@@ -21,6 +21,9 @@
           - name: git
           - name: docker
           - name: docker-compose
+
+  - role: andrewrothstein.starship
+    become: true
   tasks:
   - name: Install all packages
     ansible.builtin.package:
