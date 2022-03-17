@@ -3,6 +3,10 @@
   hosts: 
     - localhost
   tasks:
+  - name: Install all packages
+    ansible.builtin.package:
+      name:
+        - gnome-tweak-tool
   - name: Tap To Click
     dconf:
       key: /org/gnome/desktop/peripherals/touchpad/tap-to-click

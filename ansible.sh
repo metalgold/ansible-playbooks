@@ -10,6 +10,7 @@ ansible-playbook playbook_packages_docker_kubernetes_client.yml
 ansible-playbook playbook_filelimits.yml
 ansible-playbook playbook_aws.yml
 ansible-playbook playbook_jetbrains.yml
+ansible-playbook playbook_kde.yml
 # use with gnome: ansible-playbook playbook_gnome.yml
 ansible-playbook playbook_zsh.yml
 ansible-playbook playbook_sdks.yml
