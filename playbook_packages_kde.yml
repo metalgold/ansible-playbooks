@@ -8,6 +8,7 @@
     ansible.builtin.package:
       name:
         - pam_kwallet
+        - plasma5-workspace-wallpapers
       state: latest
     become: true
     tags: packages
