@@ -44,3 +44,4 @@
       dest: ~/.zshrc
       regexp: 'eval "$(starship init zsh)"'
       line: 'eval "$(starship init zsh)"'
+      create: yes
