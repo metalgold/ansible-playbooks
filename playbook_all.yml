@@ -5,7 +5,7 @@
 - name: packages
   import_playbook: playbook_packages_tumbleweed.yml
 - name: kde
-  import_playbook: playbook_kde.yml
+  import_playbook: playbook_packages_kde.yml
 #- name: gnome
 #  import_playbook: playbook_gnome.yml
 - name: aws
