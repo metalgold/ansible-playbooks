@@ -25,6 +25,13 @@
     become: true
     delegate_to: localhost
     when: not is_saml2aws_installed.stat.exists
+  - name: ensure .zshrc exists
+    copy:
+      content: ""
+      dest: ~/.zshrc
+      force: no
+      owner: "{{ ansible_user_id }}"
+      mode: 0700
   - name: Update zsh for saml2aws
     lineinfile:
       dest: ~/.zshrc

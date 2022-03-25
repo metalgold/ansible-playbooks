@@ -39,6 +39,13 @@
       groups: "docker"
       append: true
     become: true
+  - name: ensure .zshrc exists
+    copy:
+      content: ""
+      dest: ~/.zshrc
+      force: no
+      owner: "{{ ansible_user_id }}"
+      mode: 0700
   - name: Update zsh for starship
     lineinfile:
       dest: ~/.zshrc
