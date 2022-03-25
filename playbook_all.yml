@@ -1,0 +1,26 @@
+---
+- name: Workstation
+  hosts: 
+    - localhost
+- name: packages
+  import_playbook: playbook_packages_tumbleweed.yml
+- name: kde
+  import_playbook: playbook_kde.yml
+#- name: gnome
+#  import_playbook: playbook_gnome.yml
+- name: aws
+  import_playbook: playbook_aws.yml
+- name: filelimits
+  import_playbook: playbook_filelimits.yml
+- name: packages
+  import_playbook: playbook_flatpaks.yml
+- name: jetbrains
+  import_playbook: playbook_jetbrains.yml
+#- name: git
+#  import_playbook: playbook_git.yml
+- name: docker kubernetes
+  import_playbook: playbook_packages_docker_kubernetes_client.yml
+- name: sdks
+  import_playbook: playbook_sdks.yml
+- name: zsh
+  import_playbook: playbook_zsh.yml
