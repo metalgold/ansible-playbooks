@@ -26,6 +26,7 @@
       name:
         - maven
         - zeal
+    become: true
   - name: npm yarn
     npm:
       name: yarn
