@@ -4,6 +4,8 @@
     - localhost
 - name: packages
   import_playbook: playbook_packages_tumbleweed.yml
+- name: zsh
+  import_playbook: playbook_zsh.yml
 - name: kde
   import_playbook: playbook_packages_kde.yml
 #- name: gnome
@@ -22,5 +24,4 @@
   import_playbook: playbook_packages_docker_kubernetes_client.yml
 - name: sdks
   import_playbook: playbook_sdks.yml
-- name: zsh
-  import_playbook: playbook_zsh.yml
+
