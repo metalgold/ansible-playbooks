@@ -32,13 +32,6 @@
       state: latest
     become: true
     tags: packages
-  - name: change to zsh
-    ansible.builtin.user:
-      name: "{{ ansible_user_id }}"
-      shell: /bin/zsh
-      groups: "docker"
-      append: true
-    become: true
   - name: ensure .zshrc exists
     copy:
       content: ""

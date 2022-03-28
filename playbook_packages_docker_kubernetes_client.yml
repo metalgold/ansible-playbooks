@@ -19,6 +19,13 @@
       state: latest
     become: true
     tags: packages
+  - name: change to zsh
+    ansible.builtin.user:
+      name: "{{ ansible_user_id }}"
+      shell: /bin/zsh
+      groups: "docker"
+      append: true
+    become: true
   - name: Install bottle, forcing reinstallation if it's already installed
     pip:
       name:
