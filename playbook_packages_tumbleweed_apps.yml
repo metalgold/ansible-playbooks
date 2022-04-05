@@ -45,5 +45,6 @@
         - org.kde.digikam
         - org.kde.krita
         - org.speed_dreams.SpeedDreams
+        - org.signal.Signal
       remote: flathub
       method: user
