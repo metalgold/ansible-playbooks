@@ -1,0 +1,49 @@
+---
+- name: Workstation
+  hosts: 
+    - localhost
+  roles:
+  tasks:
+  - name: Install all packages
+    ansible.builtin.package:
+      name:
+        - flatpak
+        - kteatime
+      state: latest
+    become: true
+    tags: packages
+  - name: Add the flathub flatpak repository remote to the user installation
+    community.general.flatpak_remote:
+      name: flathub
+      state: present
+      flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      method: user
+  - name: Flatpak Spotify
+    community.general.flatpak:
+      name:
+        - com.github.k4zmu2a.spacecadetpinball
+        - com.jgraph.drawio.desktop
+        - de.haeckerfelix.Shortwave
+        - net.wz2100.wz2100
+        - org.srb2.SRB2
+        - org.gnome.Lollypop
+        - com.rawtherapee.RawTherapee
+        - org.darktable.Darktable
+        - net.cozic.joplin_desktop
+        - io.dbeaver.DBeaverCommunity
+        - net.minetest.Minetest
+        - com.snes9x.Snes9x
+        - com.github.marktext.marktext
+        - org.openttd.OpenTTD
+        - com.getpostman.Postman
+        - org.gottcode.FocusWriter
+        - org.citra_emu.citra
+        - net.openra.OpenRA
+        - org.libretro.RetroArch
+        - org.videolan.VLC
+        - org.blender.Blender
+        - org.kde.digikam
+        - org.kde.krita
+        - org.speed_dreams.SpeedDreams
+      remote: flathub
+      method: user
