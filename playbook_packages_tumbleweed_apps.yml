@@ -9,6 +9,8 @@
       name:
         - flatpak
         - kteatime
+        - flameshot
+        - yakuake
       state: latest
     become: true
     tags: packages
