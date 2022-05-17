@@ -23,6 +23,7 @@
         - com.mattermost.Desktop
         - com.slack.Slack
         - com.visualstudio.code
+        - org.signal.Signal
       remote: flathub
       method: user
 
