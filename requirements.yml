@@ -17,3 +17,4 @@ roles:
     version: v1.0.24
 collections:
   - name: community.general
+    version: 4.8.1
