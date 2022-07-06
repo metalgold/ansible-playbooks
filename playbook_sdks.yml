@@ -39,3 +39,9 @@
       name: '@vue/cli-service'
       global: yes
     become: true
+  - name: Update sdk config
+    lineinfile:
+      dest: ~/.sdkman/etc/config
+      regexp: 'sdkman_auto_env=false'
+      line: 'sdkman_auto_env=true'
+      create: yes  
