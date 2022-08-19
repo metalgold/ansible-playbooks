@@ -45,9 +45,3 @@
       regexp: 'eval "$(starship init zsh)"'
       line: 'eval "$(starship init zsh)"'
       create: yes
-  - name: Update zsh for ssh agent
-    lineinfile:
-      dest: ~/.zshrc
-      regexp: 'eval "$(ssh-agent)"'
-      line: 'eval "$(ssh-agent)"'
-      create: yes
