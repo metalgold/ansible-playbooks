@@ -18,3 +18,11 @@
       state: latest
     become: true
     tags: packages
+  - name: kaskpass support
+    copy:
+      dest: "~/.config/autostart-scripts/ssh-add.sh"
+      content: |
+        #!/bin/sh
+        export SSH_ASKPASS=/usr/libexec/ssh/ksshaskpass
+        /usr/bin/ssh-add -q ~/.ssh/id_ed25519 < /dev/null
+      mode: 0755
