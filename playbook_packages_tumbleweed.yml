@@ -18,6 +18,10 @@
       state: latest
     become: true
     tags: packages
+  - name: create directory with parent directories
+    file:
+      path: "~/.config/autostart-scripts/"
+      state: directory
   - name: kaskpass support
     copy:
       dest: "~/.config/autostart-scripts/ssh-add.sh"
