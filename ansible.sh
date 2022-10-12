@@ -1,9 +1,6 @@
-sudo zypper in ansible
+sudo zypper -n in ansible
 
-sudo ansible-galaxy install -r requirements.yml
 ansible-galaxy install -r requirements.yml
-
-sudo ansible-galaxy collection install -r requirements.yml
 ansible-galaxy collection install -r requirements.yml
 
 ansible-playbook playbook_all.yml -K
