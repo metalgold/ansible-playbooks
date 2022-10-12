@@ -4,8 +4,8 @@
     - localhost
 - name: packages
   import_playbook: playbook_packages_tumbleweed.yml
-- name: more apps
-  import_playbook: playbook_packages_tumbleweed_apps.yml
+#- name: more apps
+#  import_playbook: playbook_packages_tumbleweed_apps.yml
 - name: zsh
   import_playbook: playbook_zsh.yml
 - name: kde
