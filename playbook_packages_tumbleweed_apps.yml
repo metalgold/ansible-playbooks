@@ -20,7 +20,7 @@
       state: present
       flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
       method: user
-  - name: Flatpak Spotify
+  - name: Flatpaks
     community.general.flatpak:
       name:
         - com.github.k4zmu2a.spacecadetpinball
