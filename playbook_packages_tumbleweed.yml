@@ -15,6 +15,7 @@
         - rcm
         - vim
         - thunderbird
+        - vlgothic-fonts
       state: latest
     become: true
     tags: packages
