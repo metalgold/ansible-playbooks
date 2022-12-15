@@ -1,5 +1,5 @@
 ---
-- name: Workstation
+- name: Git
   hosts: 
     - localhost
   vars_prompt:
@@ -10,7 +10,7 @@
       prompt: Please enter full name for git
       private: no
   tasks:
-  - name: Install all packages
+  - name: Install git
     ansible.builtin.package:
       name:
         - git  
