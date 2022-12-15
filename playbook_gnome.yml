@@ -1,9 +1,9 @@
 ---
-- name: Workstation
+- name: Gnome
   hosts: 
     - localhost
   tasks:
-  - name: Install all packages
+  - name: Install gnome packages
     ansible.builtin.package:
       name:
         - gnome-tweak-tool
