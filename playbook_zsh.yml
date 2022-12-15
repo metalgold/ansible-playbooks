@@ -1,5 +1,5 @@
 ---
-- name: Workstation
+- name: ZSH
   hosts: 
     - localhost
   roles:
@@ -25,7 +25,7 @@
   - role: andrewrothstein.starship
     become: true
   tasks:
-  - name: Install all packages
+  - name: Install zsh
     ansible.builtin.package:
       name:
         - zsh
