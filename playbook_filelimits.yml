@@ -1,5 +1,5 @@
 ---
-- name: Workstation
+- name: File limits
   hosts: 
     - localhost
   roles:
