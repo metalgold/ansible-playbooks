@@ -1,5 +1,5 @@
 ---
-- name: Workstation
+- name: Jetbrains
   hosts: 
     - localhost
   tasks:
@@ -7,7 +7,7 @@
     stat:
       path: ~/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox
     register: is_toolbox_installed
-  - name: Jetbrains Toolbox
+  - name: Install Jetbrains Toolbox
     ansible.builtin.shell: |
       wget -cO jetbrains-toolbox.tar.gz "https://data.services.jetbrains.com/products/download?platform=linux&code=TBA"
       tar -xzf jetbrains-toolbox.tar.gz
