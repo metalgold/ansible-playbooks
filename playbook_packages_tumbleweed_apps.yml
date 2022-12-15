@@ -1,10 +1,10 @@
 ---
-- name: Workstation
+- name: Additional tumbleweed apps
   hosts: 
     - localhost
   roles:
   tasks:
-  - name: Install all packages
+  - name: Install additional apps
     ansible.builtin.package:
       name:
         - flatpak
