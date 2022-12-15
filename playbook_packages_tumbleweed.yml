@@ -1,10 +1,10 @@
 ---
-- name: Packages
+- name: Tumbleweed packages
   hosts: 
     - localhost
   roles:
   tasks:
-  - name: Install packages
+  - name: Install tumbleweed packages
     ansible.builtin.package:
       name:
         - steam
