@@ -1,5 +1,5 @@
 ---
-- name: Workstation
+- name: SDKs (java, nodejs)
   hosts: 
     - localhost
   roles:
@@ -23,7 +23,7 @@
   - role: robertdebock.npm
     become: true
   tasks:
-  - name: Install all packages
+  - name: Install development
     ansible.builtin.package:
       name:
         - maven
