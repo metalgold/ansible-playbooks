@@ -1,10 +1,10 @@
 ---
-- name: Workstation
+- name: KDE
   hosts: 
     - localhost
   roles:
   tasks:
-  - name: Install all packages
+  - name: Install kde packages
     ansible.builtin.package:
       name:
         - pam_kwallet
