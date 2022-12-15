@@ -1,9 +1,9 @@
 ---
-- name: Workstation
+- name: Flatpaks
   hosts: 
     - localhost
   tasks:
-  - name: Install all packages
+  - name: Install flatpak
     ansible.builtin.package:
       name:
         - flatpak
@@ -16,7 +16,7 @@
       state: present
       flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
       method: user
-  - name: Flatpaks
+  - name: Install flatpaks
     community.general.flatpak:
       name:
         - us.zoom.Zoom
