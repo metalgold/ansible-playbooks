@@ -1,10 +1,10 @@
 ---
-- name: Workstation
+- name: AWS
   hosts: 
     - localhost
   roles:
   tasks:
-  - name: Install all packages
+  - name: Install aws-cli
     ansible.builtin.package:
       name:
         - aws-cli
