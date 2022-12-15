@@ -1,10 +1,10 @@
 ---
-- name: Workstation
+- name: Packages
   hosts: 
     - localhost
   roles:
   tasks:
-  - name: Install all packages
+  - name: Install packages
     ansible.builtin.package:
       name:
         - steam
