@@ -1,10 +1,10 @@
 ---
-- name: Workstation
+- name: Docker/Kubernetes
   hosts: 
     - localhost
   roles:
   tasks:
-  - name: Install all packages
+  - name: Install docker, kubernetes, etc packages
     ansible.builtin.package:
       name:
         - docker
@@ -24,7 +24,7 @@
       groups: "docker"
       append: true
     become: true
-  - name: docker daemon
+  - name: Enable docker daemon
     service:
       name: docker
       state: started
