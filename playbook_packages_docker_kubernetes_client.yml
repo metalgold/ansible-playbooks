@@ -7,9 +7,7 @@
   - name: Install all packages
     ansible.builtin.package:
       name:
-        - python3-pip
         - docker
-        - python310-docker-compose
         - terraform
         - k9s
         - helm
@@ -26,10 +24,6 @@
       groups: "docker"
       append: true
     become: true
-  - name: Install bottle, forcing reinstallation if it's already installed
-    pip:
-      name:
-        - docker-compose
   - name: docker daemon
     service:
       name: docker
