@@ -7,14 +7,11 @@
   - name: Install tumbleweed packages
     ansible.builtin.package:
       name:
-        - steam
         - wget
         - direnv
         - fzf
-        - keepassxc
         - rcm
         - vim
-        - thunderbird
         - vlgothic-fonts
       state: latest
     become: true
