@@ -24,6 +24,9 @@
         - com.slack.Slack
         - com.visualstudio.code
         - org.signal.Signal
+        - org.mozilla.Thunderbird
+        - com.valvesoftware.Steam
+        - org.keepassxc.KeePassXC
       remote: flathub
       method: user
 
