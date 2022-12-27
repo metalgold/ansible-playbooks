@@ -22,7 +22,6 @@
       chmod u+x ~/.local/bin/saml2aws
       hash -r
       saml2aws --version
-    become: true
     delegate_to: localhost
     when: not is_saml2aws_installed.stat.exists
   - name: ensure .zshrc exists
