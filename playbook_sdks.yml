@@ -11,11 +11,13 @@
       - username: "{{ ansible_user_id }}"
         sdkman_install:
           - candidate: java
-            version: '11.0.11.hs-adpt'
+            version: '11.0.17-tem'
           - candidate: java
-            version: '17.0.3-tem'
+            version: '17.0.5-tem'
+          - candidate: gradle
+            version: '7.6'
         sdkman_default:
-          java: '17.0.3-tem'
+          java: '17.0.5-tem'
   - role: morgangraphics.ansible_role_nvm
     default: true
     nodejs_version: "16"
