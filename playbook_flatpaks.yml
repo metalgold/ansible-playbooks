@@ -27,6 +27,7 @@
         - org.mozilla.Thunderbird
         - com.valvesoftware.Steam
         - org.keepassxc.KeePassXC
+        - com.github.wwmm.easyeffects
       remote: flathub
       method: user
 
