@@ -34,11 +34,6 @@
       name: yarn
       global: yes
     become: true
-  - name: npm vue clie-service
-    npm:
-      name: '@vue/cli-service'
-      global: yes
-    become: true
   - name: Update sdk config
     lineinfile:
       dest: ~/.sdkman/etc/config
