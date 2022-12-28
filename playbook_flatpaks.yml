@@ -28,6 +28,7 @@
         - com.valvesoftware.Steam
         - org.keepassxc.KeePassXC
         - com.github.wwmm.easyeffects
+        - com.github.tchx84.Flatseal
       remote: flathub
       method: user
 
