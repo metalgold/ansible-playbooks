@@ -4,13 +4,13 @@
     - localhost
   roles:
   tasks:
-  - name: Install kde packages
-    ansible.builtin.package:
-      name:
-        - tlp
-      state: absent
-    become: true
-    tags: packages
+#  - name: Install kde packages
+#    ansible.builtin.package:
+#      name:
+#        - tlp
+#      state: absent
+#    become: true
+#    tags: packages
   - name: Install tumbleweed packages
     ansible.builtin.package:
       name:
@@ -20,7 +20,7 @@
         - rcm
         - vim
         - vlgothic-fonts
-        - power-profiles-daemon
+#        - power-profiles-daemon
       state: latest
     become: true
     tags: packages
