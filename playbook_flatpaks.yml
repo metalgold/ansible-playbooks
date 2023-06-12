@@ -25,7 +25,7 @@
         - com.visualstudio.code
         - org.signal.Signal
         - org.mozilla.Thunderbird
-        - com.valvesoftware.Steam
+        #- com.valvesoftware.Steam
         - org.keepassxc.KeePassXC
         - com.github.wwmm.easyeffects
         - com.github.tchx84.Flatseal
