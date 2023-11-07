@@ -14,8 +14,8 @@
 #  import_playbook: playbook_gnome.yml
 - name: aws
   import_playbook: playbook_aws.yml
-- name: filelimits
-  import_playbook: playbook_filelimits.yml
+#- name: filelimits
+#  import_playbook: playbook_filelimits.yml
 - name: packages
   import_playbook: playbook_flatpaks.yml
 - name: jetbrains
