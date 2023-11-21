@@ -1,6 +1,6 @@
 roles:
   - name: andrewrothstein.starship
-    version: v1.1.6
+    version: v1.1.5
   - name: gantsign.sdkman
     version: 2.2.0
   - name: gantsign.sdkman_init
