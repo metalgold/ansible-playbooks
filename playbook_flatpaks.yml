@@ -19,16 +19,15 @@
   - name: Install flatpaks
     community.general.flatpak:
       name:
+        - com.google.Chrome
         - us.zoom.Zoom
         - com.mattermost.Desktop
         - com.slack.Slack
         - com.visualstudio.code
         - org.signal.Signal
         - org.mozilla.Thunderbird
-        #- com.valvesoftware.Steam
+        - com.valvesoftware.Steam
         - org.keepassxc.KeePassXC
-        - com.github.wwmm.easyeffects
-        - com.github.tchx84.Flatseal
       remote: flathub
       method: user
 
