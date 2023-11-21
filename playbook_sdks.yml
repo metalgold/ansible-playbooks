@@ -23,7 +23,6 @@
     nodejs_version: "16"
     nvm_profile: "/home/{{ ansible_user_id }}/.zshrc"
   - role: robertdebock.npm
-    become: true
   tasks:
   - name: Install development
     ansible.builtin.package:
@@ -35,7 +34,6 @@
     npm:
       name: yarn
       global: yes
-    become: true
   - name: Update sdk config
     lineinfile:
       dest: ~/.sdkman/etc/config
