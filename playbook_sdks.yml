@@ -21,7 +21,7 @@
   - role: morgangraphics.ansible_role_nvm
     default: true
     nodejs_version: "16"
-    nvm_profile: "/home/{{ ansible_user_id }}/.zshrc"
+    nvm_profile: ".zshrc"
   - role: robertdebock.npm
   tasks:
   - name: Install development
