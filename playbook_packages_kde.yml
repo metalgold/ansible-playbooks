@@ -9,6 +9,7 @@
       name:
         - pam_kwallet
         - plasma5-workspace-wallpapers
+        - breeze5-wallpapers
       state: latest
     become: true
     tags: packages
