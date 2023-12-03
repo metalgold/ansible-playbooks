@@ -19,10 +19,8 @@
         sdkman_default:
           java: '17.0.5-tem'
   - role: morgangraphics.ansible_role_nvm
-    default: true
-    nodejs_version: "16"
-    nvm_profile: ".zshrc"
   - role: robertdebock.npm
+    become: true
   tasks:
   - name: Install development
     ansible.builtin.package:
@@ -34,6 +32,7 @@
     npm:
       name: yarn
       global: yes
+    become: true
   - name: Update sdk config
     lineinfile:
       dest: ~/.sdkman/etc/config
