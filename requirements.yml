@@ -10,9 +10,9 @@ roles:
   - name: gantsign.antigen
     version: 1.4.2
   - name: morgangraphics.ansible_role_nvm
-    version: v1.5.2
+    version: v2.0.0
   - name: robertdebock.npm
-    version: 3.2.0
+    version: 3.2.2
   - name: robertdebock.ulimit
     version: 2.1.4
 collections:
