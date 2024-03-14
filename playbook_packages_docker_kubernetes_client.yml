@@ -9,7 +9,7 @@
       name:
         - docker
         - docker-compose
-        - terraform
+        #- terraform // gone from repo
         - k9s
         - helm
         - kubernetes-client
