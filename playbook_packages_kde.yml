@@ -7,7 +7,7 @@
   - name: Install kde packages
     ansible.builtin.package:
       name:
-        - pam_kwallet
+        - pam_kwallet6
         - plasma6-workspace-wallpapers
         - breeze6-wallpapers
       state: latest
