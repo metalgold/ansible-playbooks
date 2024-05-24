@@ -31,8 +31,3 @@
       force: no
       owner: "{{ ansible_user_id }}"
       mode: 0700
-  - name: Update zsh for saml2aws
-    lineinfile:
-      dest: ~/.zshrc
-      regexp: 'export AWS_PROFILE=saml'
-      line: "export AWS_PROFILE=saml"
