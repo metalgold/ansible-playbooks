@@ -28,11 +28,6 @@
         - maven
         - zeal
     become: true
-  - name: npm yarn
-    npm:
-      name: yarn
-      global: yes
-    become: true
   - name: Update sdk config
     lineinfile:
       dest: ~/.sdkman/etc/config
