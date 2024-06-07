@@ -24,10 +24,6 @@
       state: latest
     become: true
     tags: packages
-  - name: create directory with parent directories
-    file:
-      path: "~/.config/autostart-scripts/"
-      state: directory
   - name: kaskpass support
     copy:
       dest: "~/.config/plasma-workspace/env/ssh-add.sh"
@@ -38,3 +34,9 @@
           eval "$(ssh-agent -s)"
         fi
       mode: 0755
+  - name: Update zsh for ksshaskpass
+    lineinfile:
+      dest: ~/.zshrc
+      regexp: 'export SSH_ASKPASS=/usr/libexec/ssh/ksshaskpass'
+      line: 'export SSH_ASKPASS=/usr/libexec/ssh/ksshaskpass'
+      create: yes
