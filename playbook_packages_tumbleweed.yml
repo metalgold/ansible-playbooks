@@ -35,8 +35,6 @@
         #!/bin/sh
         export SSH_ASKPASS=/usr/libexec/ssh/ksshaskpass
         if [ ! -S ~/.ssh/ssh_auth_sock ]; then
-          eval "$(ssh-agent -s < /dev/null)" > /dev/null
-          ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
-          /usr/bin/ssh-add -q ~/.ssh/id_ed25519 < /dev/null
+          eval "$(ssh-agent -s)"
         fi
       mode: 0755
