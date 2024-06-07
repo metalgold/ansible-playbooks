@@ -30,7 +30,7 @@
       state: directory
   - name: kaskpass support
     copy:
-      dest: "~/.config/autostart-scripts/ssh-add.sh"
+      dest: "~/.config/plasma-workspace/env/ssh-add.sh"
       content: |
         #!/bin/sh
         export SSH_ASKPASS=/usr/libexec/ssh/ksshaskpass
