@@ -32,6 +32,7 @@
     copy:
       dest: "~/.config/autostart-scripts/ssh-add.sh"
       content: |
+        #!/bin/sh
         export SSH_ASKPASS=/usr/libexec/ssh/ksshaskpass
         if [ ! -S ~/.ssh/ssh_auth_sock ]; then
           eval "$(ssh-agent -s < /dev/null)" > /dev/null
