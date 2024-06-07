@@ -33,7 +33,7 @@
       dest: "~/.config/autostart-scripts/ssh-add.sh"
       content: |
         export SSH_ASKPASS=/usr/libexec/ssh/ksshaskpass
-        eval `ssh-agent`
+        eval `ssh-agent -s > /dev/null`
         ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
         /usr/bin/ssh-add -q ~/.ssh/id_ed25519 < /dev/null
       mode: 0755
