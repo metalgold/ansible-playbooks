@@ -26,7 +26,6 @@
     ansible.builtin.package:
       name:
         - maven
-        - zeal
     become: true
   - name: Update sdk config
     lineinfile:
