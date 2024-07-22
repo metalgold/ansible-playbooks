@@ -16,6 +16,8 @@
             url: zsh-users/zsh-syntax-highlighting
           - name: zsh-autosuggestions
             url: zsh-users/zsh-autosuggestions
+          - name: fast-syntax-highlighting
+            url: zdharma-continuum/fast-syntax-highlighting
           - name: zsh-completions
             url: zsh-users/zsh-completions
           - name: git
